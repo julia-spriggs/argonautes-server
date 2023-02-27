@@ -15,8 +15,8 @@ const app = express();
 require("./config")(app);
 
 // 👇 Start handling routes here
-const indexRoutes = require("./routes/index.routes");
-app.use("/api", indexRoutes);
+// const indexRoutes = require("./routes/index.routes");
+// app.use("/api", indexRoutes);
 app.use("/api", require("./routes/argonaut.routes"));
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes

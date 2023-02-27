@@ -3,8 +3,8 @@ const router = express.Router();
 
 const User = require("../models/User.model");
 
-//POST /api/argonauts Create a new argonaut
-router.post("/argonauts", (req, res, next) => {
+//POST /api/ Create a new argonaut
+router.post("/", (req, res, next) => {
   const { name } = req.body;
 
   const newUser = { name };
@@ -20,8 +20,8 @@ router.post("/argonauts", (req, res, next) => {
     });
 });
 
-// GET /api/argonauts - Get list of argonauts
-router.get('/argonauts', (req, res, next) => {
+// GET /api/ - Get list of argonauts
+router.get('/', (req, res, next) => {
     User.find()
     .then(allUsers => {
         res.json(allUsers)
